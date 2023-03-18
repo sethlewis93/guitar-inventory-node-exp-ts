@@ -6,7 +6,7 @@ import * as express from "express";
  * The code below passess the user profile object and passes it to the views as data.
  */
 export const register = (app: express.Application) => {
-    const oidc = app.locals.oidc;
+    const oidc = app.locals.oidc
 
     // Route handler for the home page
     app.get("/", (req: any, res) => {
