@@ -20,6 +20,9 @@ const port = process.env.SERVER_PORT;
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// Configure Express to serve static files in the public directory
+app.use(express.static(path.join(__dirname, "public")));
+
 // Configure session auth
 sessionAuth.register(app);
 
