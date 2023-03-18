@@ -1,5 +1,5 @@
 import * as express from "express";
-
+import * as api from "./api";
 /**
  * OIDC middleware attaches a userContext object and isAuthenticated() function to every user request.
  * The userContext object has a userinfo property that contains user information.
@@ -30,4 +30,7 @@ export const register = (app: express.Application) => {
         const user = req.userContext ? req.userContext.userinfo : null;
         res.render("guitars", { isAuthenticated: req.isAuthenticated(), user });
     });
-}
+
+    // API registration
+    api.register(app);
+};

@@ -1,3 +1,4 @@
+import exp from "constants";
 import dotenv from "dotenv";
 import express from "express";
 import path from "path"
@@ -8,6 +9,9 @@ import * as routes from "./routes"
 dotenv.config();
 
 const app = express();
+
+// Directs Express to parse incoming JSON
+app.use(express.json());
 
 // Port is part of the runtime
 const port = process.env.SERVER_PORT;
