@@ -1,3 +1,3 @@
 # ABOUT
 
-Node.js application using TypeScript, Express, and Okta authentication middleware.
+Node.js application using TypeScript, Express, PostgreSQL, and Okta authentication middleware.
